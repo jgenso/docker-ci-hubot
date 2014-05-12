@@ -19,4 +19,5 @@ WORKDIR /hubot
 RUN npm install && npm install --save hubot-hipchat
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD hubot-scripts.json /hubot/hubot-scripts.json
 CMD ["supervisord", "-n"]
